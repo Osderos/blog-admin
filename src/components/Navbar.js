@@ -1,9 +1,32 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import LoginForm from "./LoginForm";
 
-function Header() {
+import styled from "styled-components";
+
+function Navbar() {
   return (
-    <div>Header</div>
-  )
+    <NavbarContainer>
+      <h1>OsDeRos Blog Admin</h1>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/newpost"}>New Post</Link>
+      <Link to={"/allposts"}>All Posts</Link>
+      <div>
+        <LoginForm />
+      </div>
+    </NavbarContainer>
+  );
 }
 
-export default Header
+const NavbarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:15px;
+  div {
+    display: flex;
+    margin-left: auto;
+  }
+`;
+
+export default Navbar;
