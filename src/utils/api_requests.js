@@ -14,4 +14,17 @@ const getAuthors = async () => {
   return authors;
 };
 
-export { getAuthors };
+const postSignup = async (newUser) => {
+  try {
+    const response = await axios.post(
+      "http://localhost:3000/api/author/signup",
+      newUser
+    );
+    console.log(response.data);
+    return response.data
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export { getAuthors, postSignup };
