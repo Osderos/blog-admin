@@ -11,6 +11,7 @@ function Navbar() {
       <Link to={"/"}>Home</Link>
       <Link to={"/newpost"}>New Post</Link>
       <Link to={"/allposts"}>All Posts</Link>
+      <Link to={"/authors"}>Registered Authors</Link>
       <div>
         <LoginForm />
       </div>
